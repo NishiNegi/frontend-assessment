@@ -5,10 +5,12 @@ import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 import Product from './pages/Product/Product';
 import React from 'react';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
+    <Navbar />
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/about' element={<About />} />
