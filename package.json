@@ -40,5 +40,8 @@
   "volta": {
     "node": "16.18.1",
     "npm": "9.1.2"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
   }
 }
