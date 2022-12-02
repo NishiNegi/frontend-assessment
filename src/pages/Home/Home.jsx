@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
 
@@ -14,12 +15,18 @@ const Home = () => {
       }
     }
     fetchProducts();
-    // results.map((product) => <p>{product.title}</p> )
   }, []);
+
   return (
     <>
       <h1>Products</h1>
       <div className="products__grid">
+        {/* <ProductCard
+          key="1"
+          title="{product.title}"
+          image="{product.image}"
+          id={1}
+        /> */}
         {results.map((product) => (
           <ProductCard
             key={product.id}
