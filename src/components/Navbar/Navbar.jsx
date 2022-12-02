@@ -1,9 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './style.scss';
 
 const Navbar = () => (
-  <nav>
-    <ul>
+  <nav className="top-navbar">
+    <ul className="top-navbar__ul">
       <li>
         <Link to="/">Home</Link>
       </li>
