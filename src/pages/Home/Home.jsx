@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../../components/ProductCard/ProductCard';
+import './style.scss';
 
 const Home = () => {
   const [results, setResults] = useState([]);
@@ -33,6 +33,7 @@ const Home = () => {
             title={product.title}
             image={product.image}
             id={product.id}
+            className="products__product"
           />
         ))}
       </div>

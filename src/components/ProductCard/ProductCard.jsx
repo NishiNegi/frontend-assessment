@@ -1,8 +1,7 @@
-/* eslint-disable no-shadow */
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './style.scss';
 
 const formatTime = (time) => {
   let minutes = Math.floor(time / 60);
@@ -29,8 +28,8 @@ const ProductCard = (props) => {
   useEffect(() => {
     if (countdown <= 0) {
       clearInterval(timerId.current);
-      const button = document.getElementById('button');
-      button.classList.add('disable');
+      const button = document.getElementById(`product-card__button${id}`);
+      button.classList.add('product-card__button--disable');
     }
   }, [countdown]);
 
@@ -41,7 +40,7 @@ const ProductCard = (props) => {
       </figure>
       <h3>{title}</h3>
       <div>{formatTime(countdown)}</div>
-      <Link id="button" to={`/product/${id}`}>Go to detail</Link>
+      <Link id={`product-card__button${id}`} className="product-card__button" to={`/product/${id}`}>Go to detail</Link>
     </div>
   );
 };

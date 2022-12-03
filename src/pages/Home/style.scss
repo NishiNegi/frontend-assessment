@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  .products{
+    &__grid{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      max-width: 100vw;
+    }
+  }
+  .product-card{
+    width: 30%;
+  }
+
+}
