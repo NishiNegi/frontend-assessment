@@ -5,10 +5,10 @@ import './style.scss';
 const Navbar = () => (
   <nav className="top-navbar">
     <ul className="top-navbar__ul">
-      <li>
+      <li className="top-navbar__li">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className="top-navbar__li">
         <Link to="/about">About</Link>
       </li>
     </ul>

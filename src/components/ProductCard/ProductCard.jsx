@@ -15,7 +15,7 @@ const formatTime = (time) => {
 
 const ProductCard = (props) => {
   const { title, image, id } = props;
-  const [countdown, setCountdown] = useState(Math.floor(Math.random() * 60));
+  const [countdown, setCountdown] = useState(Math.floor(Math.random() * 120));
   const timerId = useRef();
 
   useEffect(() => {
@@ -38,9 +38,16 @@ const ProductCard = (props) => {
       <figure className="product-card__fig">
         <img src={image} alt={title} className="product-card__img" />
       </figure>
-      <h3>{title}</h3>
-      <div>{formatTime(countdown)}</div>
-      <Link id={`product-card__button${id}`} className="product-card__button" to={`/product/${id}`}>Go to detail</Link>
+      <div className="product-card__caption">
+        <h3 className="product-card__caption-header">{title}</h3>
+        <p className="product-card__countdown">{formatTime(countdown)}</p>
+        <Link
+          id={`product-card__button${id}`}
+          className="product-card__button"
+          to={`/product/${id}`}
+        >Go to detail
+        </Link>
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types';
+import './style.scss';
 
 const ProductDetail = (props) => {
   const {
@@ -12,11 +12,15 @@ const ProductDetail = (props) => {
 
   return (
     <div className="product-detail">
-      <h1>{name}</h1>
-      <img src={image} alt="" />
-      <p>{description}</p>
-      <p>{category}</p>
-      <p>${price}</p>
+      <figure className="product-detail__image">
+        <img className="product-detail__img" src={image} alt={name} />
+      </figure>
+      <div className="product-detail__caption">
+        <h1>{name}</h1>
+        <p>{description}</p>
+        <p><b>Category: </b><span className="product-detail__category">{category}</span></p>
+        <p className="product-detail__price">${price}</p>
+      </div>
 
     </div>
   );

@@ -1,19 +1,46 @@
 .product-card{
+  align-items: stretch;
+  border-radius: 1em;
+  border: solid 1px rgb(97,182,246);
+  display: flex;
+  padding: 1em;
   width: 100%;
+  background-color: white;
+  &__fig{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  &__caption{
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+  }
   &__img{
     max-width: 100%;
-    aspect-ratio: 1 / 1;
+  }
+  &__caption-header{
+    flex-grow: 2;
+    text-align: left;
+  }
+  &__countdown{
+    font-size: 1.5em;
+    text-align: right;
   }
   &__button{
-    display: block;
-    background-color: darkcyan;
+    align-self:flex-end;
+    background-color: rgb(240,134,115);
+    color: white;
+    display: inline;
+    justify-self: flex-end;
     padding: .5em 1em;
     text-decoration: none;
-    color: white;
+    width: 7em;
     &--disable{
-      pointer-events: none;
       background-color: rgb(219, 219, 219);
       color: white;
+      pointer-events: none;
     }
   }
 }

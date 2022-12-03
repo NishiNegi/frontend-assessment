@@ -21,12 +21,6 @@ const Home = () => {
     <>
       <h1>Products</h1>
       <div className="products__grid">
-        {/* <ProductCard
-          key="1"
-          title="{product.title}"
-          image="{product.image}"
-          id={1}
-        /> */}
         {results.map((product) => (
           <ProductCard
             key={product.id}

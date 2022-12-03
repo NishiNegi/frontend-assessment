@@ -9,13 +9,16 @@ import Navbar from './components/Navbar/Navbar';
 
 const App = () => (
   <div className="App">
+
     <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/product/:id" element={<Product />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <main className="App__container">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/product/:id" element={<Product />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </main>
   </div>
 );
 

@@ -4,4 +4,11 @@
     display: flex;
     gap: 1em;
   }
+  &__li a{
+    color: rgb(97,182,246);
+    text-decoration: none;
+  }
+  &__li a:hover{
+    color: rgb(34,44,125);
+  }
 }
