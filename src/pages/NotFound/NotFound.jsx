@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const NotFound = () => (
-  <div className="">
+  <div>
     <h1>Error 404 - Page not found</h1>
   </div>
 );
